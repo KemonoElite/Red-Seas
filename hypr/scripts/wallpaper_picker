@@ -1,0 +1,12 @@
+#!/bin/sh
+
+swww_fork=~/.config/hypr/scripts/tools/swww
+hypr=$HOME/.config/hypr
+wallpaper_folder=$hypr/wallpapers
+
+wallpaper_location="$(ls $wallpaper_folder | wofi --show dmenu)"
+
+$hypr/scripts/variables/set_env background "$wallpaper_folder/$wallpaper_location"
+
+$hypr/scripts/wallpaper
+
